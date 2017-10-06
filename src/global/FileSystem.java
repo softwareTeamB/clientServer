@@ -3,12 +3,14 @@ package global;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
 /**
  * Waar alles wat met io te maken heeft
+ *
  * @author michel
  */
 public class FileSystem {
@@ -30,11 +32,15 @@ public class FileSystem {
 
         //close the buffering
         BufferedWriter bw = new BufferedWriter(new FileWriter(fileLocatie));
-        
+
         //writter
         bw.write(data);
 
         //close the writer
         bw.close();
+
+        PrintWriter writer = new PrintWriter(fileLocatie);
+        writer.println(data);
+        writer.close();
     }
 }
