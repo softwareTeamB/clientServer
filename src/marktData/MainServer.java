@@ -24,7 +24,7 @@ public abstract class MainServer {
      * data op te slaan
      */
     public abstract void getData();
-
+    
     /**
      * methoden die de array vuld met de markt naam
      *
